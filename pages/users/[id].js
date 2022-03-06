@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import Head from "next/head";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import Layout from "../components/layout";
 import Title from "../components/title";
@@ -14,6 +15,11 @@ export default function User({user}) {
 
 return (
 <Layout>
+
+<Head>
+      <title>User {user.name}</title>
+                <meta name="description" content="Garabato arte"/>
+            </Head>
     
     <Title> User ID {user.id}</Title>
     <div className="card">

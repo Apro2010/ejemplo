@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import Layout from "../components/layout";
 import Title from "../components/title";
 import React, {component} from "react";
@@ -22,6 +23,10 @@ export default function posts({posts}) {
 
     return(
         <Layout>
+          <Head>
+                <title>Garabato - post</title>
+                <meta name="description" content="Garabato post"/>
+            </Head>
            
             <Title>Post Pages</Title>
             <div className="grid">

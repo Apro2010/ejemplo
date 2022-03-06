@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../components/layout";
 import Title from "../components/title";
 import react from "react";
@@ -6,6 +7,10 @@ export default function post({ post }) {
 
      return (
 <Layout>
+<Head>
+                <title>post {post.id}</title>  
+                <meta name="description" content="Garabato arte"/>
+            </Head>
     <Title> Posts Details</Title>
     <div className="card">
       <h2> {post.Title} </h2> 
